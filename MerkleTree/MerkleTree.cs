@@ -29,10 +29,39 @@ namespace MerkleTree
 
 
         }
-
+        
+        /// <summary>
+        /// Generate merkletree from given leaf nodes
+        /// </summary>
+        /// <param name="cryptoTransactions"></param>
+        /// <returns></returns>
         private MerkleTreeNode MakeMerkleTree(IEnumerable<MerkleTreeNode> cryptoTransactions) 
         {
-            return null;
+            //Check for single transaction, if so return as root.
+            if(cryptoTransactions.Count() == 1)
+            {
+                return cryptoTransactions.Single();
+            }
+            
+            //if transactions are odd than duplicate last transcation to make it even (As per Merkle tree rule)
+            if(cryptoTransactions.Count() % 2 != 0)
+            {
+                cryptoTransactions = balancedMerkleTree(cryptoTransactions);
+            }
+
+            var mergedTransaction = cryptoTransactions
+                .Chunk(2)
+                .Select(pair =>
+                {
+                    var left = pair.First();
+                    var right = pair.Last();
+                    var hashTransactionWithTag = HashTransactionWithTag(HashTag, left.Hash + right.Hash);
+
+                    return new MerkleTreeNode(ToHexString(hashTransactionWithTag), left, right);
+                }).ToList();
+
+            //Recursively calling function with new merger transaction list
+            return MakeMerkleTree(mergedTransaction);
         }
 
         /// <summary>
@@ -70,6 +99,24 @@ namespace MerkleTree
                 return sha256.ComputeHash(concateTagHashWithTransaction);
             }
         }
-        
+
+        /// <summary>
+        ///  Balance merkle tree by duplicate last transcation to make it even (If its odd)
+        /// </summary>
+        /// <param name="cryptoTransactions"></param>
+        /// <returns></returns>
+        private IEnumerable<MerkleTreeNode> balancedMerkleTree(IEnumerable<MerkleTreeNode> cryptoTransactions)
+        {
+            if (cryptoTransactions.Count() % 2 != 0)
+            {
+                var listMerkleTreeLeafs = new List<MerkleTreeNode>();
+
+                listMerkleTreeLeafs = cryptoTransactions.ToList();
+                listMerkleTreeLeafs.Add(cryptoTransactions.Last());
+                return listMerkleTreeLeafs;
+            }
+
+            return cryptoTransactions;
+        }
     }
 }

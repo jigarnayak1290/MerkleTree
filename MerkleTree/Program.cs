@@ -7,6 +7,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Register MerkleTree
+builder.Services.AddSingleton<MerkleTree.MerkleTree>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

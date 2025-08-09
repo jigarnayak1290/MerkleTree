@@ -26,8 +26,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -51,8 +55,7 @@
               "RelativeToolTip": "MerkleTree\\MerkleTree.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T08:31:59.258Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-09T08:31:59.258Z"
             },
             {
               "$type": "Document",
@@ -64,8 +67,7 @@
               "RelativeToolTip": "MerkleTree\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T08:29:28.847Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-09T08:29:28.847Z"
             },
             {
               "$type": "Document",
@@ -77,8 +79,7 @@
               "RelativeToolTip": "MerkleTree\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwAUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T08:22:32.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-09T08:22:32.626Z"
             }
           ]
         }

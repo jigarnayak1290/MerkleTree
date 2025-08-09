@@ -30,3 +30,4 @@ G:\cryptoApi\MerkleTree\MerkleTree\obj\Debug\net8.0\refint\MerkleTree.dll
 G:\cryptoApi\MerkleTree\MerkleTree\obj\Debug\net8.0\MerkleTree.pdb
 G:\cryptoApi\MerkleTree\MerkleTree\obj\Debug\net8.0\MerkleTree.genruntimeconfig.cache
 G:\cryptoApi\MerkleTree\MerkleTree\obj\Debug\net8.0\ref\MerkleTree.dll
+G:\cryptoApi\MerkleTree\MerkleTree\obj\Debug\net8.0\MerkleTree.sourcelink.json
