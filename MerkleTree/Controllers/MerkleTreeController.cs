@@ -6,22 +6,22 @@ namespace MerkleTree.Controllers
     [Route("[controller]")]
     public class MerkleTreeController : ControllerBase
     {
-        private readonly MerkleTree _merkleTree;
+        private readonly MerkleTreeService _merkleTreeService;
 
-        public MerkleTreeController(MerkleTree merkleTree)
+        public MerkleTreeController(MerkleTreeService merkleTreeService)
         {
-            _merkleTree = merkleTree;
+            _merkleTreeService = merkleTreeService;
         }
 
-        [HttpPost("make-tree")]
-        public IActionResult MakeMerkleTree([FromBody] List<string> transactions)
+        [HttpPost("getmerkleroot")]
+        public IActionResult CalculateMerkleRoot([FromBody] List<string> transactions)
         {
-            if (transactions == null || !transactions.Any())
+            if (transactions == null || transactions.Count() ==0 )
             {
-                return BadRequest("Transactions can not be empty.");
+                return BadRequest("Received Transactions are empty, unable to calculate merkle root for empty transaction list");
             }
 
-            var rootHash = _merkleTree.CalculateMerkleRoot(transactions);
+            var rootHash = _merkleTreeService.CalculateMerkleRoot(transactions);
 
             //If null return from calculation then handle with gracefull return
             if (rootHash == null)

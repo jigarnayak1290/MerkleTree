@@ -7,8 +7,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//Register MerkleTree
-builder.Services.AddSingleton<MerkleTree.MerkleTree>();
+//Register All Services
+builder.Services.AddSingleton<MerkleTree.MerkleTreeService>();     //Register MerkleTree Service
 
 var app = builder.Build();
 

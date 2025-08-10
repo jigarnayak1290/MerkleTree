@@ -5,6 +5,6 @@
     /// </summary>
     public record MerkleTreeNode(
         string Hash, 
-        MerkleTreeNode Left = null, 
-        MerkleTreeNode Right = null);
+        MerkleTreeNode? Left = null, 
+        MerkleTreeNode? Right = null);
 }

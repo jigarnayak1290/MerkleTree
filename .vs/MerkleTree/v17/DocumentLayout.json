@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "G:\\cryptoApi\\MerkleTree\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F6F40DFF-BAA3-4625-8958-63D7572BAB45}|MerkleTree\\MerkleTree.csproj|g:\\cryptoapi\\merkletree\\merkletree\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6F40DFF-BAA3-4625-8958-63D7572BAB45}|MerkleTree\\MerkleTree.csproj|solutionrelative:merkletree\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F6F40DFF-BAA3-4625-8958-63D7572BAB45}|MerkleTree\\MerkleTree.csproj|g:\\cryptoapi\\merkletree\\merkletree\\controllers\\merkletreecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6F40DFF-BAA3-4625-8958-63D7572BAB45}|MerkleTree\\MerkleTree.csproj|solutionrelative:merkletree\\controllers\\merkletreecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6F40DFF-BAA3-4625-8958-63D7572BAB45}|MerkleTree\\MerkleTree.csproj|g:\\cryptoapi\\merkletree\\merkletree\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6F40DFF-BAA3-4625-8958-63D7572BAB45}|MerkleTree\\MerkleTree.csproj|solutionrelative:merkletree\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6F40DFF-BAA3-4625-8958-63D7572BAB45}|MerkleTree\\MerkleTree.csproj|g:\\cryptoapi\\merkletree\\merkletree\\merkletreeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6F40DFF-BAA3-4625-8958-63D7572BAB45}|MerkleTree\\MerkleTree.csproj|solutionrelative:merkletree\\merkletreeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6F40DFF-BAA3-4625-8958-63D7572BAB45}|MerkleTree\\MerkleTree.csproj|g:\\cryptoapi\\merkletree\\merkletree\\merkletree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6F40DFF-BAA3-4625-8958-63D7572BAB45}|MerkleTree\\MerkleTree.csproj|solutionrelative:merkletree\\merkletree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6F40DFF-BAA3-4625-8958-63D7572BAB45}|MerkleTree\\MerkleTree.csproj|g:\\cryptoapi\\merkletree\\merkletree\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F6F40DFF-BAA3-4625-8958-63D7572BAB45}|MerkleTree\\MerkleTree.csproj|solutionrelative:merkletree\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6F40DFF-BAA3-4625-8958-63D7572BAB45}|MerkleTree\\MerkleTree.csproj|g:\\cryptoapi\\merkletree\\merkletree\\models\\merkletreenode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6F40DFF-BAA3-4625-8958-63D7572BAB45}|MerkleTree\\MerkleTree.csproj|solutionrelative:merkletree\\models\\merkletreenode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6F40DFF-BAA3-4625-8958-63D7572BAB45}|MerkleTree\\MerkleTree.csproj|g:\\cryptoapi\\merkletree\\merkletree\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6F40DFF-BAA3-4625-8958-63D7572BAB45}|MerkleTree\\MerkleTree.csproj|solutionrelative:merkletree\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,67 +34,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MerkleTreeController.cs",
-              "DocumentMoniker": "G:\\cryptoApi\\MerkleTree\\MerkleTree\\Controllers\\MerkleTreeController.cs",
-              "RelativeDocumentMoniker": "MerkleTree\\Controllers\\MerkleTreeController.cs",
-              "ToolTip": "G:\\cryptoApi\\MerkleTree\\MerkleTree\\Controllers\\MerkleTreeController.cs",
-              "RelativeToolTip": "MerkleTree\\Controllers\\MerkleTreeController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T22:28:38.124Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MerkleTreeNode.cs",
-              "DocumentMoniker": "G:\\cryptoApi\\MerkleTree\\MerkleTree\\Models\\MerkleTreeNode.cs",
-              "RelativeDocumentMoniker": "MerkleTree\\Models\\MerkleTreeNode.cs",
-              "ToolTip": "G:\\cryptoApi\\MerkleTree\\MerkleTree\\Models\\MerkleTreeNode.cs",
-              "RelativeToolTip": "MerkleTree\\Models\\MerkleTreeNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T09:14:25.211Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MerkleTree.cs",
-              "DocumentMoniker": "G:\\cryptoApi\\MerkleTree\\MerkleTree\\MerkleTree.cs",
-              "RelativeDocumentMoniker": "MerkleTree\\MerkleTree.cs",
-              "ToolTip": "G:\\cryptoApi\\MerkleTree\\MerkleTree\\MerkleTree.cs",
-              "RelativeToolTip": "MerkleTree\\MerkleTree.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAAD8AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T08:31:59.258Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "G:\\cryptoApi\\MerkleTree\\MerkleTree\\Program.cs",
               "RelativeDocumentMoniker": "MerkleTree\\Program.cs",
               "ToolTip": "G:\\cryptoApi\\MerkleTree\\MerkleTree\\Program.cs",
               "RelativeToolTip": "MerkleTree\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T08:29:28.847Z",
+              "WhenOpened": "2025-08-10T04:17:24.85Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "G:\\cryptoApi\\MerkleTree\\MerkleTree\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "MerkleTree\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "G:\\cryptoApi\\MerkleTree\\MerkleTree\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "MerkleTree\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
+              "Title": "Dockerfile",
+              "DocumentMoniker": "G:\\cryptoApi\\MerkleTree\\MerkleTree\\Dockerfile",
+              "RelativeDocumentMoniker": "MerkleTree\\Dockerfile",
+              "ToolTip": "G:\\cryptoApi\\MerkleTree\\MerkleTree\\Dockerfile",
+              "RelativeToolTip": "MerkleTree\\Dockerfile",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAcwA4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-10T04:15:25.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MerkleTreeController.cs",
+              "DocumentMoniker": "G:\\cryptoApi\\MerkleTree\\MerkleTree\\Controllers\\MerkleTreeController.cs",
+              "RelativeDocumentMoniker": "MerkleTree\\Controllers\\MerkleTreeController.cs",
+              "ToolTip": "G:\\cryptoApi\\MerkleTree\\MerkleTree\\Controllers\\MerkleTreeController.cs",
+              "RelativeToolTip": "MerkleTree\\Controllers\\MerkleTreeController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAqwBwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T08:22:32.626Z",
+              "WhenOpened": "2025-08-10T04:11:40.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MerkleTreeService.cs",
+              "DocumentMoniker": "G:\\cryptoApi\\MerkleTree\\MerkleTree\\MerkleTreeService.cs",
+              "RelativeDocumentMoniker": "MerkleTree\\MerkleTreeService.cs",
+              "ToolTip": "G:\\cryptoApi\\MerkleTree\\MerkleTree\\MerkleTreeService.cs",
+              "RelativeToolTip": "MerkleTree\\MerkleTreeService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwDcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T04:11:08.297Z",
               "EditorCaption": ""
             }
           ]

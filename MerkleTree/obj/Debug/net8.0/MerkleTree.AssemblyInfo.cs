@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MerkleTree")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c601a64bbbf361c1e4ed4c308fb54e7a8f485d3d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0dd6a575994b7f09e80949ab29103d498f795b53")]
 [assembly: System.Reflection.AssemblyProductAttribute("MerkleTree")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MerkleTree")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
