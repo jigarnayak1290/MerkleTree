@@ -1,0 +1,6 @@
+@MerkleTree_HostAddress = http://localhost:5202
+
+GET {{MerkleTree_HostAddress}}/makemerkletree/
+Accept: application/json
+
+###
