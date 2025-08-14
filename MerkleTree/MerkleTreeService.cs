@@ -6,8 +6,9 @@ namespace MerkleTree
 {
     public class MerkleTreeService
     {
-        //Hash tag (text) used for leaf hash & branch hash
-        private const string HashTagForLeafNBranch = "Bitcoin_Transaction";
+        //Hash tag (text) 
+        private const string HashTagForLeaf = "ProofOfReserve_Leaf";
+        private const string HashTagForBranch = "ProofOfReserve_Branch";
 
         /// <summary>
         /// Create merkle tree from received leaf nodes
@@ -24,11 +25,11 @@ namespace MerkleTree
             //Calculate hash of individual leaf node
             List<MerkleTreeNode> MerkleLeafNodes = _leafNodes.Select(
                 t => new MerkleTreeNode(
-                    Hash: ToHexString(HashTransactionWithTag(HashTagForLeafNBranch, Encoding.UTF8.GetBytes(t)))
+                    Hash: ToHexString(HashTransactionWithTag(HashTagForLeaf, Encoding.UTF8.GetBytes(t)))
                 )).ToList();
 
             //Make Merkle tree from hashed leaf nodes
-            return MakeMerkleTree(HashTagForLeafNBranch, MerkleLeafNodes);
+            return MakeMerkleTree(HashTagForBranch, MerkleLeafNodes);
         }
 
         /// <summary>
