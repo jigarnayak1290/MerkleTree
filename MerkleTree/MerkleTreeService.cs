@@ -14,7 +14,7 @@ namespace MerkleTree
         /// </summary>
         /// <param name="_leafNodes"></param>
         /// <returns>Merkle root hash</returns>
-        public string? CalculateMerkleRoot(IEnumerable<string> _leafNodes)
+        public MerkleTreeNode? CalculateMerkleRoot(IEnumerable<string> _leafNodes)
         {
             if (_leafNodes == null || !_leafNodes.Any())
             {
@@ -28,7 +28,7 @@ namespace MerkleTree
                 )).ToList();
 
             //Make Merkle tree from hashed leaf nodes
-            return MakeMerkleTree(HashTagForLeafNBranch, MerkleLeafNodes).Hash;
+            return MakeMerkleTree(HashTagForLeafNBranch, MerkleLeafNodes);
         }
 
         /// <summary>
@@ -44,29 +44,51 @@ namespace MerkleTree
                 return transactions.Single();
             }
 
-            //if transactions are odd than duplicate last transcation to make it even (As per Merkle tree rule)
-            if (transactions.Count() % 2 != 0)
+            var nextLevelNodes = new List<MerkleTreeNode>();
+
+            for (int i = 0; i < transactions.Count(); i += 2)
             {
-                transactions = balancedMerkleTree(transactions);
+                var left = transactions.ElementAt(i);
+                var right = i == transactions.Count()-1 ? transactions.ElementAt(i): transactions.ElementAt(i+1);
+                var leftBytes = FromHexString(left.Hash);
+                var rightBytes = FromHexString(right.Hash);
+                var mergedBytes = leftBytes.Concat(rightBytes).ToArray();
+
+                var hashTransactionWithTag = HashTransactionWithTag(hashTag, mergedBytes);
+                var hexString = ToHexString(hashTransactionWithTag);
+
+                var node = new MerkleTreeNode(hexString, left, right);
+
+                nextLevelNodes.Add(node);
             }
 
-            var mergedTransaction = transactions
-                .Chunk(2)
-                .Select(pair =>
-                {
-                    var left = pair.First();
-                    var right = pair.Last();
-                    var leftBytes = FromHexString(left.Hash);
-                    var rightBytes = FromHexString(right.Hash);
-                    var mergedBytes = leftBytes.Concat(rightBytes).ToArray();
-
-                    var hashTransactionWithTag = HashTransactionWithTag(hashTag, mergedBytes);
-
-                    return new MerkleTreeNode(ToHexString(hashTransactionWithTag), left, right);
-                }).ToList();
-
             //Recursively calling function with merged transaction list
-            return MakeMerkleTree(hashTag, mergedTransaction);
+            return MakeMerkleTree(hashTag, nextLevelNodes);
+
+            //// Below code is commented as it is not used in current implementation, but can be used for reference (It is similar to above code)
+            ////if transactions are odd than duplicate last transcation to make it even (As per Merkle tree rule)
+            //if (transactions.Count() % 2 != 0)
+            //{
+            //    transactions = balancedMerkleTree(transactions);
+            //}
+
+            //var mergedTransaction = transactions
+            //    .Chunk(2)
+            //    .Select(pair =>
+            //    {
+            //        var left = pair.First();
+            //        var right = pair.Last();
+            //        var leftBytes = FromHexString(left.Hash);
+            //        var rightBytes = FromHexString(right.Hash);
+            //        var mergedBytes = leftBytes.Concat(rightBytes).ToArray();
+
+            //        var hashTransactionWithTag = HashTransactionWithTag(hashTag, mergedBytes);
+
+            //        return new MerkleTreeNode(ToHexString(hashTransactionWithTag), left, right);
+            //    }).ToList();
+
+            ////Recursively calling function with merged transaction list
+            //return MakeMerkleTree(hashTag, mergedTransaction);
         }
 
         /// <summary>
@@ -101,23 +123,23 @@ namespace MerkleTree
             return SHA256.HashData(concateTagHashWithTransaction);
         }
 
-        /// <summary>
-        ///  Balance merkle tree by duplicate last transcation to make it even (If its odd)
-        /// </summary>
-        /// <param name="cryptoTransactions"></param>
-        /// <returns>Even merkle leaf nodes</returns>
-        private IEnumerable<MerkleTreeNode> balancedMerkleTree(IEnumerable<MerkleTreeNode> cryptoTransactions)
-        {
-            if (cryptoTransactions.Count() % 2 != 0)
-            {
-                var listMerkleTreeLeafs = new List<MerkleTreeNode>();
+        ///// <summary>
+        /////  Balance merkle tree by duplicate last transcation to make it even (If its odd)
+        ///// </summary>
+        ///// <param name="cryptoTransactions"></param>
+        ///// <returns>Even merkle leaf nodes</returns>
+        //private IEnumerable<MerkleTreeNode> balancedMerkleTree(IEnumerable<MerkleTreeNode> cryptoTransactions)
+        //{
+        //    if (cryptoTransactions.Count() % 2 != 0)
+        //    {
+        //        var listMerkleTreeLeafs = new List<MerkleTreeNode>();
 
-                listMerkleTreeLeafs = cryptoTransactions.ToList();
-                listMerkleTreeLeafs.Add(cryptoTransactions.Last());
-                return listMerkleTreeLeafs;
-            }
+        //        listMerkleTreeLeafs = cryptoTransactions.ToList();
+        //        listMerkleTreeLeafs.Add(cryptoTransactions.Last());
+        //        return listMerkleTreeLeafs;
+        //    }
 
-            return cryptoTransactions;
-        }
+        //    return cryptoTransactions;
+        //}
     }
 }
