@@ -6,8 +6,35 @@ namespace MerkleTree
 {
     public class MerkleTreeService
     {
-        //Hash tag (text) used for leaf hash & branch hash
-        private const string HashTagForLeafNBranch = "Bitcoin_Transaction";
+        //Hash tag (text) 
+        private const string DefaultHashTagForLeafNBranch = "Bitcoin_Transaction";
+        private readonly string LeafHashTag;
+        private readonly string BranchHashTag;
+
+        /// <summary>
+        /// Will use default hash tag "Bitcoin_Transaction" for leaf and branch
+        /// </summary>
+        public MerkleTreeService() : this(DefaultHashTagForLeafNBranch, DefaultHashTagForLeafNBranch)
+        { }
+
+        /// <summary>
+        /// will use given single hash tag for leaf and branch both
+        /// This is useful when you want to use same tag for both leaf and branch nodes.
+        /// </summary>
+        /// <param name="HashTagForLeaf"></param>
+        public MerkleTreeService(string HashTagForLeaf) : this(HashTagForLeaf, HashTagForLeaf)
+        { }
+
+        /// <summary>
+        /// Will use given first hash tags for leaf and second hash tag for branch nodes.
+        /// </summary>
+        /// <param name="HashTagForLeaf"></param>
+        /// <param name="HashTagForBranch"></param>
+        public MerkleTreeService(string HashTagForLeaf, string HashTagForBranch)
+        {
+            LeafHashTag = HashTagForLeaf;
+            BranchHashTag = HashTagForBranch;
+        }
 
         /// <summary>
         /// Create merkle tree from received leaf nodes
@@ -24,11 +51,11 @@ namespace MerkleTree
             //Calculate hash of individual leaf node
             List<MerkleTreeNode> MerkleLeafNodes = _leafNodes.Select(
                 t => new MerkleTreeNode(
-                    Hash: ToHexString(HashTransactionWithTag(HashTagForLeafNBranch, Encoding.UTF8.GetBytes(t)))
+                    Hash: ToHexString(HashTransactionWithTag(LeafHashTag, Encoding.UTF8.GetBytes(t)))
                 )).ToList();
 
             //Make Merkle tree from hashed leaf nodes
-            return MakeMerkleTree(HashTagForLeafNBranch, MerkleLeafNodes);
+            return MakeMerkleTree(BranchHashTag, MerkleLeafNodes);
         }
 
         /// <summary>

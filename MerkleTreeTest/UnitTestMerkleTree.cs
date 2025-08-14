@@ -5,7 +5,7 @@ namespace MerkleTreeTest
     public class UnitTestMerkleTree
     {
         [Fact]
-        public void Test1()
+        public void Test_ABCDESample()
         {
             // Arrange test data (Example transactions to be hashed)
             // In a real-world scenario, these would be actual transaction data.
