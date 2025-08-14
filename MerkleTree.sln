@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MerkleTree", "MerkleTree\MerkleTree.csproj", "{F6F40DFF-BAA3-4625-8958-63D7572BAB45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerkleTreeTest", "MerkleTreeTest\MerkleTreeTest.csproj", "{14140201-2C32-4746-9E41-10CC655AE54A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F6F40DFF-BAA3-4625-8958-63D7572BAB45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6F40DFF-BAA3-4625-8958-63D7572BAB45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6F40DFF-BAA3-4625-8958-63D7572BAB45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14140201-2C32-4746-9E41-10CC655AE54A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14140201-2C32-4746-9E41-10CC655AE54A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14140201-2C32-4746-9E41-10CC655AE54A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14140201-2C32-4746-9E41-10CC655AE54A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
